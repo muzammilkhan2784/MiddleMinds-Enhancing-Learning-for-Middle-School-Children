@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    <title>Parent Survey</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #E2F1F8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column; /* Align items in a column */
+            align-items: center; /* Center the content horizontally */
+        }
+        .navigation {
+            background: white;
+            padding: 10px 0;
+            width: 100%;
+            text-align: center; /* Center buttons horizontally */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .nav-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .nav-button:hover {
+            background-color: #45a049;
+        }
+        form {
+            background: white;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            width: 100%;
+            max-width: 550px;
+            margin-top: 20px;
+        }
+        .form-section {
+            margin-bottom: 30px; /* Increased bottom margin for more space between sections */
+        }
+        input[type="text"], input[type="email"], input[type="number"], textarea, select {
+            width: 100%;
+            padding: 12px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <button class="nav-button" onclick="window.location.href='index.html';">Home</button>
+        <button class="nav-button" onclick="window.location.href='resources.html';">Resources</button>
+        <button class="nav-button" onclick="window.location.href='insights.html';">Dashboards</button>
+        <button class="nav-button" onclick="window.location.href='game/maingame.php';">Game</button>
+        <button class="nav-button" onclick="window.location.href='survey.html';">Survey</button>
+    </div>
+    <form id="surveyForm">
+        <h2>Parent Survey</h2>
+        <div class="form-section">
+            <label for="parentName">Name:</label>
+            <input type="text" id="parentName" name="parentName" required>
+        </div>
+
+        <div class="form-section">
+            <label for="parentEmail">Email:</label>
+            <input type="email" id="parentEmail" name="parentEmail" required>
+        </div>
+
+        <div class="form-section">
+            <label for="childrenCount">How many children do you have in middle school (grades 6-8)?</label>
+            <input type="number" id="childrenCount" name="childrenCount" required>
+        </div>
+
+        <div class="form-section">
+            <label>Biggest Challenges:</label>
+            <select name="biggestChallenge1" required>
+                <option value="">Select a challenge...</option>
+                <option value="Understanding the material">Understanding the material</option>
+                <option value="Keeping up with homework">Keeping up with homework</option>
+                <option value="Social interactions">Social interactions</option>
+                <option value="Motivation">Motivation</option>
+            </select>
+            <select name="biggestChallenge2">
+                <option value="">Select another challenge...</option>
+                <option value="Understanding the material">Understanding the material</option>
+                <option value="Keeping up with homework">Keeping up with homework</option>
+                <option value="Social interactions">Social interactions</option>
+                <option value="Motivation">Motivation</option>
+            </select>
+            <select name="biggestChallenge3">
+                <option value="">Select another challenge...</option>
+                <option value="Understanding the material">Understanding the material</option>
+                <option value="Keeping up with homework">Keeping up with homework</option>
+                <option value="Social interactions">Social interactions</option>
+                <option value="Motivation">Motivation</option>
+            </select>
+            <input type="text" class="other-input" name="otherChallenge" placeholder="Other (please specify)">
+        </div>
+
+        <div class="form-section">
+            <label>Parent Involvement:</label>
+            <div class="radio-group">
+                <input type="radio" id="veryInvolved" name="involvementLevel" value="Very involved" required>
+                <label for="veryInvolved">Very involved</label>
+            </div>
+            <div class="radio-group">
+                <input type="radio" id="somewhatInvolved" name="involvementLevel" value="Somewhat involved">
+                <label for="somewhatInvolved">Somewhat involved</label>
+            </div>
+            <div class="radio-group">
+                <input type="radio" id="notVeryInvolved" name="involvementLevel" value="Not very involved">
+                <label for="notVeryInvolved">Not very involved</label>
+            </div>
+            <div class="radio-group">
+                <input type="radio" id="notInvolvedAtAll" name="involvementLevel" value="Not involved at all">
+                <label for="notInvolvedAtAll">Not involved at all</label>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <label for="suggestions">Do you have any suggestions for improving the school or your child's educational experience?</label>
+            <textarea id="suggestions" name="suggestions" rows="4"></textarea>
+        </div>
+
+        <div class="form-section">
+            <button type="submit" class="submit-button">Submit Survey</button>
+        </div>
+    </form>
+
+    <script>
+        document.getElementById('surveyForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting to the server
+            alert('Response Recorded'); // Show alert
+            this.reset(); // Reset the form fields
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet"> 
+    <title>MiddleMinds Insights & Dashboards</title>
+    <style>
+        .sectionif:hover {
+            border-color: rgb(85, 255, 244);
+        }
+        .section-container {
+            display: inline-block;
+        }
+        .toggle {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #3fc1c9;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .hidden {
+            display: none;
+        }
+        .info {
+            text-align: left;
+            font-size: 16px;
+        }
+        .video-container {
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center; /* Center-align the elements */
+            width: 100%; /* Full width of the container */
+            max-width: 560px; /* Maximum width of the video */
+            margin: auto; /* Center the container */
+        }
+        iframe {
+            width: 100%; /* Responsive width */
+            height: 315px; /* Fixed height */
+            border: none; /* No border */
+        }
+        .video-title {
+            font-size: 20px; /* Larger text for visibility */
+            color: #3fc1c9; /* Color to match your design */
+            margin-bottom: 10px; /* Space between title and video */
+
+        }
+        .hidden {
+    display: none;
+}
+.button-container {
+    text-align: center;
+}
+
+
+    </style>
+    
+</head>
+<body>
+    <div id="section1" class="section">
+        <img src="assets/media/MiddleMinds-2.png">
+        <header>
+            <nav class="top-nav">
+                <ul>
+                    <li id="one"><a href="index.html">Home</a></li>
+                    <li id="two"><a href="resources.html">Learning Resources</a></li>
+                    <li id="three"><a href="insights.html">Insights & Dashboards</a></li>
+                    <li id="five"><a href="game/maingame.php">Let's Game</a></li>
+                    <li id="six"><a href="survey.html">Survey</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <img src="assets/media/MiddleMinds-bg2.png">
+    
+    <div class="button-container">
+        <button id="videoToggle" class="toggle">Do you wanna see how the brain works?</button>
+    </div>
+    <div class="video-container hidden" id="videoContainer">
+        <iframe src="https://www.youtube.com/embed/ndDpjT0_IM0?si=KcaDfRL7J0iTxXaF" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    
+
+    <div class="section-container">
+        <div class="sectionif">
+            <h2>Community Voices: Learning Through Shared Experiences</h2>
+            <button class="toggle" onclick="toggleVisibility('parent-corner')">Parent Corner</button>
+            <div class="hidden info" id="parent-corner">
+                <p><strong>Real Stories from Parents:</strong> "After incorporating recommended visual learning techniques, my son's understanding of complex math concepts improved dramatically. Visual aids like diagrams and interactive apps were game changers for him." — Claudia Robinson, Parent of a 6th grader.</p>
+                <p><strong>Parent Tips and Tricks:</strong> "Introducing my child to interactive science kits turned his apprehension into excitement. It's wonderful to see him so engaged and curious, experimenting with real-world applications of his lessons." — Tom Henderson, Parent of a 7th grader.</p>
+                <p><strong>Highlight on Health and Wellness:</strong> "Ensuring a balanced schedule with time for play and relaxation has helped my daughter maintain her focus during study hours more effectively. This balance is crucial for her mental and physical well-being." — Sarah Lee, Parent of an 8th grader.</p>
+            </div>
+            <button class="toggle" onclick="toggleVisibility('educator-insights')">Educators' Insights</button>
+            <div class="hidden info" id="educator-insights">
+                <p><strong>Classroom Innovations:</strong> "Introducing role-play into language classes helped students overcome their fear of speaking. By playing characters, they became more engaged and their language skills improved noticeably." — Mark Benson, History Teacher.</p>
+                <p><strong>Effective Teaching Techniques:</strong> "Debate sessions in our social studies classes have significantly improved students' critical thinking skills. It’s inspiring to see them articulate their thoughts so confidently and engage in meaningful discussions." — Linda Choi, Social Studies Teacher.</p>
+                <p><strong>Learning Environment Enhancements:</strong> "Creating a classroom that adapts to various learning styles has increased participation and satisfaction among students. Our flexible seating and technology-integrated lessons cater to different preferences, making learning more personalized and effective." — Emily Rhodes, Science Teacher.</p>
+            </div>
+        </div>
+        <div class="sectionif">
+            <h2>Learning from Experts: In-Depth Articles and Practical Advice</h2>
+            <p><strong>Monthly Expert Column:</strong> "Integrating Emotional Intelligence in Curriculum" by Dr. Linda Freeman, Educational Psychologist, discusses how incorporating empathy and self-awareness can lead to better learning environments and enhanced academic performance. This approach not only supports academic growth but also personal development.</p>
+            <p><strong>Insightful Interviews:</strong> "Rethinking Homework: Insights from Educational Leader James Peterson" explores the diminishing returns of traditional homework. Peterson advocates for alternative home-based activities that promote practical learning, creativity, and family engagement.</p>
+        </div>
+        <div class="sectionif">
+            <h2>Trends and Innovations in Education</h2>
+            <p><strong>Latest Research Summaries:</strong> A recent study from the National Education Association highlights that students engaged in blended learning environments (combining digital with traditional learning) show a 30% increase in comprehension and retention over those in traditional settings alone. This data suggests the effectiveness of technology integration in enhancing educational outcomes.</p>
+            <p><strong>Innovative Educational Practices:</strong> A spotlight on Montessori Middle School of Austin, which adopted a fully student-led learning approach, resulting in a 40% increase in student engagement and a 50% reduction in disciplinary actions. This model emphasizes student autonomy and real-world problem-solving.</p>
+        </div>
+
+        <div class="sectionif">
+            <h2>Interactive Community Feedback</h2>
+            <p><strong>Community Polls and Surveys:</strong> Recent survey results reveal that 85% of participating parents and teachers support incorporating more technology into the curriculum, particularly for subjects like science and math. This feedback is instrumental in guiding our resource allocation and curriculum development.</p>
+            <p><strong>Feedback Highlights:</strong> In response to community feedback, our school implemented "No Homework Wednesdays," which has been met with overwhelmingly positive reviews from both students and parents. This midweek break promotes well-being and balance, allowing students to pursue personal interests and family time.</p>
+        </div>
+        <div class="sectionif">
+            <h2>Success Stories: What Works</h2>
+            <p><strong>Impactful Changes:</strong> The Greenfield School District reported a significant improvement in middle school math scores after integrating peer tutoring programs. Older students helping younger ones not only fostered a sense of community but also enhanced the learners' responsibility and leadership skills.</p>
+            <p><strong>Student Showcase:</strong> "Eco-Warriors," a student-initiated environmental club, successfully lobbied for recycling bins in all classrooms, dramatically increasing recycling rates within the school and raising awareness about environmental responsibility.</p>
+        </div>
+        <div class="sectionif">
+            <h2>Join the Discussion: Your Voice Matters</h2>
+            <p><strong>Discussion Forums:</strong> A recent hot topic in our forum discusses the best methods for teaching science effectively. Many educators shared innovative approaches like using everyday items for experiments to demonstrate scientific principles.</p>
+            <p><strong>Submit Your Insight:</strong> We encourage all members of our educational community to contribute their own experiences and insights. This month, we featured an article by 8th grader Mia Chen on her experience with learning through educational apps, highlighting her favorite features and the benefits of interactive learning.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 MiddleMinds Insights & Dashboards. All rights reserved.</p>
+    </footer>
+    <script>
+        function toggleVisibility(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === 'none') {
+                element.style.display = 'block';
+            } else {
+                element.style.display = 'none';
+            }
+        }
+        document.getElementById("videoToggle").addEventListener("click", function() {
+    var videoContainer = document.getElementById("videoContainer");
+    if (videoContainer.classList.contains("hidden")) {
+        videoContainer.classList.remove("hidden");
+        this.textContent = "Hide Video";
+    } else {
+        videoContainer.classList.add("hidden");
+        this.textContent = "Do you wanna see how the brain works?";
+    }
+});
+
+
+    </script>
+</body>
+</html>

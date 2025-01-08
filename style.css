@@ -1,0 +1,287 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+    font-family: "DM Sans", sans-serif;
+    background-color: #ffffff; 
+    background-image: linear-gradient(rgba(0, 0, 0, 1) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(0, 0, 0, 1) 1px, transparent 1px);
+    background-size: 50px 50px; 
+}
+
+
+
+header {
+    color: #000000;
+    padding: 10px 20px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 450;
+    font-size: 15px;
+    display: flex;
+    justify-content: flex-end;
+    border: solid;
+    background-color: #fffef7d2; 
+    position: fixed;
+    border-radius: 30px;
+    border-width: 2px;
+    border-color: black;    
+    padding: 10px; /* Add padding to the top and bottom */
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 30px;
+
+}
+
+nav ul li {
+
+    border-radius: 30px;
+
+    display: inline-block;
+}
+
+nav ul li a {
+    border-radius: 30px;
+    display: block;
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+    transition:  0.3s; 
+}
+
+nav ul li a:hover {
+    border-radius: 30px;
+
+}
+
+#one a:hover {
+    background-color: rgba(237, 26, 61, 0.44);
+}
+#two a:hover{
+    background-color: rgba(255, 233, 192, 0.891);
+}
+#three a:hover{
+    background-color: rgba(241, 33, 186, 0.44);
+}
+#four a:hover{
+    background-color: rgba(59, 120, 242, 0.44);
+}
+#five a:hover{
+    background-color: rgba(228, 255, 72, 0.44);
+}
+#six a:hover{
+    background-color: rgba(44, 253, 86, 0.44);
+}
+
+
+.top-nav {
+    top: 0;
+    z-index: 999; 
+    
+}
+
+.sections-nav {
+    justify-content: center;
+    position: absolute;
+    margin-top: 10px; 
+}
+main {
+    padding: 20px;
+}
+
+
+
+section:hover{
+color: rgb(0, 0, 0);   
+ transition: 0.3s; 
+
+}
+
+#section2 section:hover{
+    background-color: rgba(255, 84, 46, 0.492);
+
+}
+
+#section3 section:hover{
+    background-color: rgba(9, 255, 0, 0.502);
+
+}
+
+#section4 section:hover{
+    background-color: rgba(46, 126, 255, 0.412);
+
+}
+
+
+article {
+    overflow: auto; 
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+article h3 {
+    color: #005a87;
+}
+
+
+
+.sectionif {
+    margin-top: 30px;
+ display: inline-block;
+ margin-bottom: 20px;
+  padding: 20px;
+ padding-left: 30px;
+ padding-right: 30px;
+border-radius: 30px;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+transition: transform 0.3s ease; 
+background-color: #fffef7; 
+}
+
+
+.sectionif:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    transform: scale(1.1); 
+    border: solid;
+
+
+}
+#seven{
+    background-color: rgba(185, 255, 190, 0.672);
+}
+
+img.math-gif {
+    float: right; 
+    width: 150px; 
+    margin-left: 10px; 
+    height: auto;
+}
+
+img.larger-gif {
+    width: 200px; 
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color:  #fffef7;
+    border: 1px solid black; /* Added border width */
+    color: #000000;
+    margin-top: 5%;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    position: inherit;
+}
+
+
+
+img{
+        z-index: -1;
+        width: 100%;
+        position: absolute;
+        display: inline-block;
+        justify-content: center;
+}
+
+
+
+
+#section1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    }
+
+.section-container {
+    margin: 10%;
+    display: flex;
+    justify-content: space-between; /* Adjust as needed */
+    height: 80vh;
+
+}
+
+.sectioner {
+    width: 30%; /* Adjust as needed */
+    flex: 1; /* Each section occupies equal space */
+    margin: 30px 10px; /* Adjust the spacing between sections */
+    padding: 20px; /* Add padding to the sections */
+    border-radius: 8px;
+    transition:  0.3s; 
+
+}
+
+header, .content {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Basic styling for the hamburger menu */
+.hamburger {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 30px;
+    display: none;
+    cursor: pointer;
+}
+
+/* Ensure the navigation links are displayed flexibly */
+.nav-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Responsive media query */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger icon on small screens */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        display: none; /* Hide links initially */
+    }
+
+    .nav-links li {
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-links li a {
+        padding: 10px;
+        width: 100%;
+        display: block;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
