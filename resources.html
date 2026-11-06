@@ -1,199 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning Resources - MiddleMinds</title>
-    <link rel="stylesheet" href="assets/CSS/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <style>
-
-.margin{
-    margin: 10%;
-
-}
-
-
- h2{
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-
-    background-color: #fffef7; 
-    border-radius: 30px;
-    padding: 20px;
-}
-
-#section1{
-    margin: 0;
-}
-.sectionif:hover{
-    border-color: rgb(255, 202, 103);
-}
-
-body{
-    display: inline-block;
-    justify-content: center;
-}
-        .sectionif{
-            display: grid;
-        }
-
-        .gif-container {
-    height: 200px; 
-    overflow: hidden; 
-    text-align: center;
-    margin-top: 20px;
-}
-
-.gif-container img {
-    width: 70px;
-    height: 70px; 
-}
-
-
-        .gif-container, .interactive-container {
-            text-align: center;
-            margin-top: 20px;
-            display: none;
-
-        }
-
-        .gif-container img, .interactive-container img {
-            max-width: 100%;
-            height: auto;
-        }
-
-
-        .bold {
-            font-weight: bold;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Learning Resources — MiddleMinds</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-    <div id="section1" class="section">
-        <img src="assets/media/MiddleMinds-3.png">
-    <header>
-        <nav class="top-nav">
-            <ul>
-                <li id="one"><a href="index.html">Home</a></li>
-                <li id="two"><a href="resources.html">Learning Resources</a></li>
-                <li id="three"><a href="insights.html">Insights & Dashboards</a></li>
-                <li id="five"><a href="game/maingame.php">Let's Game</a></li>
-                <li id="six"><a href="survey.html">Survey</a></li>
-            </ul>
-        </nav>
-    </header>
-</div>
+<body data-page="resources">
+<div class="grid-bg" aria-hidden="true"></div>
 
+<header class="nav">
+  <a class="nav__brand" href="index.html"><span>~/</span>middleminds</a>
+  <nav class="nav__links" aria-label="Main">
+    <a href="index.html" data-page="home">Home</a>
+    <a href="resources.html" data-page="resources">Learning Resources</a>
+    <a href="insights.html" data-page="insights">Insights</a>
+    <a href="survey.html" data-page="survey">Parent Survey</a>
+    <a class="nav__cta" href="game/index.php">Let's Play</a>
+  </nav>
+  <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
 
+<main class="wrap">
+  <section class="page-head">
+    <p class="kicker">$ cat resources.md</p>
+    <h1>Learning Resources</h1>
+    <p>Short lessons with visual examples. Tap <span class="accent mono">Visualize</span> on any operation to see it animated.</p>
+  </section>
 
-<div class="margin">
-            <h2>Mastering Mathematical Operations</h2>
-            <div class="sectionif">
-                <h3>Addition - The Building Block of Math</h3>
-                <p>Understanding addition is crucial as it forms the foundation of arithmetic. It involves combining quantities to form a larger amount, used daily from simple calculations to complex equations. Explore this concept through visual examples and interactive exercises that make learning addition fun and engaging.</p>
-                <button class="show-gif-btn" data-gif="assets/media/Addition.gif">Visualize Addition</button>
-                <div class="gif-container">
-                    <img src="assets/media/Addition.gif" alt="Visual Representation of Addition">
-                </div>
-            </div>
-            <div class="sectionif">
-                <h3>Subtraction - Simplifying Numbers</h3>
-                <p>Subtraction is essential for understanding differences between quantities, crucial for tasks ranging from budgeting to calculating distances. This section offers a deep dive into subtraction with interactive tools that help visualize and simplify the concept.</p>
-                
-            </div>          
-            <div class="sectionif">
-                <h3>Multiplication - Accelerating Arithmetic</h3>
-                <p>Multiplication is not just repeated addition; it's a fundamental mathematical operation that underpins area calculations, algebra, and more. This section includes animations that show multiplication in action and interactive quizzes to test and improve your skills.</p>
-                <button class="show-gif-btn" data-gif="assets/media/Multiplication.gif">Visualize Multiplication</button>
-                <div class="gif-container">
-                    <img src="assets/media/Multiplication.gif" alt="Visual Representation of Multiplication">
-                </div>
-            </div>
-            <div class="sectionif">
-                <h3>Division - Dividing Decisively</h3>
-                <p>Division helps in understanding how things are distributed in equal parts, from dividing pizza among friends to splitting tasks in projects. Learn division through step-by-step examples and interactive modules that make complex divisions straightforward and understandable.</p>
-                <button class="show-gif-btn" data-gif="assets/media/Division.gif">Visualize Division</button>
-                <div class="gif-container">
-                    <img src="assets/media/Division.gif" alt="Visual Representation of Division">
-                </div>
-            </div>
-        </section>
+  <section class="section">
+    <h2 class="h-sec reveal"><span class="h-sec__num">01.</span> Mastering mathematical operations</h2>
+    <div class="cards cards--4">
+      <article class="card reveal">
+        <p class="card__tag">+ Addition</p>
+        <h3>The building block of math</h3>
+        <p>Addition combines quantities into a larger amount. It's the foundation of arithmetic, from quick sums to long equations.</p>
+        <button class="btn" data-visual>Visualize addition</button>
+        <div class="visual"><img src="assets/media/addition.gif" alt="Animated example of addition"></div>
+      </article>
+      <article class="card reveal">
+        <p class="card__tag">− Subtraction</p>
+        <h3>Simplifying numbers</h3>
+        <p>Subtraction finds the difference between quantities, which you use for everything from budgeting to measuring distance.</p>
+        <button class="btn" data-visual>Visualize subtraction</button>
+        <div class="visual"><img src="assets/media/subtraction.gif" alt="Animated example of subtraction"></div>
+      </article>
+      <article class="card reveal">
+        <p class="card__tag">× Multiplication</p>
+        <h3>Accelerating arithmetic</h3>
+        <p>Multiplication is more than repeated addition. It powers area, algebra and much more.</p>
+        <button class="btn" data-visual>Visualize multiplication</button>
+        <div class="visual"><img src="assets/media/multiplication.gif" alt="Animated example of multiplication"></div>
+      </article>
+      <article class="card reveal">
+        <p class="card__tag">÷ Division</p>
+        <h3>Dividing decisively</h3>
+        <p>Division splits things into equal parts, like sharing a pizza between friends or splitting tasks in a project.</p>
+        <button class="btn" data-visual>Visualize division</button>
+        <div class="visual"><img src="assets/media/division.gif" alt="Animated example of division"></div>
+      </article>
+    </div>
+  </section>
 
-        <section class="physics-section">
-            <h2>Exploring the Dynamics of Motion</h2>
-            <div class="sectionif">
-                <h3>Understanding Speed</h3>
-                <p>Speed describes how fast an object moves. We explore this concept through practical examples and interactive simulations that highlight its everyday importance in everything from driving to sports. Interactive exercises help students understand the factors that affect speed and how it can be measured in real scenarios.</p>
-            
-                
-            </div>
-            <div class="sectionif">
-                <h3>Exploring Velocity</h3>
-                <p>Velocity adds direction to speed. Learn through vector diagrams and simulations how velocity is different from speed and why it matters in scenarios such as navigation and sports. This section includes hands-on activities that allow students to manipulate variables and see the effects in real-time.</p>
-          
-                
-            </div>
-            <div class="sectionif">
-                <h3>Decoding Acceleration</h3>
-                <p>Acceleration is a measure of how quickly velocity changes. Through animations, see how acceleration affects objects in motion, from cars to roller coasters. This segment provides a comprehensive look at acceleration with practical examples and interactive tools that demonstrate how acceleration is involved in everyday physics.</p>
-          
-                
-            </div>
-        </section>
+  <section class="section">
+    <h2 class="h-sec reveal"><span class="h-sec__num">02.</span> Exploring the dynamics of motion</h2>
+    <div class="cards">
+      <article class="card reveal"><p class="card__tag">Physics</p><h3>Understanding speed</h3>
+        <p>Speed describes how fast an object moves. See why it matters in everything from driving to sports, and how it's measured.</p></article>
+      <article class="card reveal"><p class="card__tag">Physics</p><h3>Exploring velocity</h3>
+        <p>Velocity adds direction to speed. Vector diagrams show how it differs from speed and why it matters for navigation.</p></article>
+      <article class="card reveal"><p class="card__tag">Physics</p><h3>Decoding acceleration</h3>
+        <p>Acceleration measures how quickly velocity changes, from cars pulling away to roller coasters dropping.</p></article>
+    </div>
+  </section>
 
-        <section class="quiz-section">
-            <h2>Interactive Quizzes to Challenge Your Mind</h2>
-            <div class="sectionif">
-                <h3>Fractions Quiz</h3>
-                <p>Test your understanding of fractions with our interactive quiz that offers immediate feedback to help you learn and improve. This quiz covers basic to advanced fraction concepts, ensuring a thorough grasp of the subject through engaging, problem-solving scenarios.</p>
-            </div>
-            <div class="sectionif">
-                <h3>Decimals Drill</h3>
-                <p>Enhance your decimal skills with real-world problems. Our quizzes are designed to challenge you and build your confidence in handling money, measurements, and more. Each quiz dynamically adjusts to student responses, providing a personalized learning experience that grows with you.</p>
-            </div>
-        </section>
-        <div class="sectionif">
+  <section class="section">
+    <h2 class="h-sec reveal"><span class="h-sec__num">03.</span> Study smarter</h2>
+    <div class="cards">
+      <article class="card reveal"><p class="card__tag">Quiz</p><h3>Fractions &amp; decimals</h3>
+        <p>Practice fractions and decimals with real-world problems about money and measurements, then test yourself in the game.</p>
+        <a class="btn" href="game/index.php">Play the quiz</a></article>
+      <article class="card reveal"><p class="card__tag">Habit</p><h3>The Pomodoro technique</h3>
+        <p>Study in focused 25-minute blocks with short breaks. It keeps your energy up and distractions down.</p></article>
+      <article class="card reveal"><p class="card__tag">Challenge</p><h3>Eco-Innovator</h3>
+        <p>Each month, take on an environmental challenge, from waste reduction to saving energy, and share your project.</p></article>
+    </div>
+  </section>
+</main>
 
-        <section class="book-apps-section">
-            <h2>Curated Learning Tools: Books & Apps</h2>
-            <p>Discover our monthly picks of engaging books and dynamic educational apps that make learning science and math fun and interactive. Each selection is reviewed to ensure it meets educational standards and offers the most engaging and informative experience possible.</p>
-        </section>
-</div>
-<div class="sectionif">
-
-        <section class="challenge-section">
-            <h2>Monthly Environmental Challenge: Eco-Innovator</h2>
-            <p>Each month, tackle a new environmental challenge. Develop projects that make a difference in your community, from waste reduction initiatives to energy conservation campaigns. Participants will have the opportunity to showcase their projects, receiving feedback and recognition from their peers and experts.</p>
-        </section>
-</div>
-<div class="sectionif">
-
-        <section class="pomodoro-section">
-            <h2>Pomodoro Technique: Optimizing Study Sessions</h2>
-            <p>Learn to manage your study time effectively with the Pomodoro Technique. This method helps you maintain focus and energy, significantly enhancing your learning efficiency. Students are guided through setting up their study sessions with the Pomodoro Technique, including tips for minimizing distractions and maximizing productivity.</p>
-        </section>
-
-     
-       <p>Using these methods, the Learning Resources page offers a variety of educational tools and techniques designed to enhance the learning experience for middle school students. Each section is crafted to build knowledge, stimulate interest, and provide practical skills in both academic and real-world scenarios.</p>
-  </div>  
-</div>
-    <footer>
-        <p>© 2024 MiddleMinds - All Rights Reserved | Terms & Conditions | Privacy Policy</p>
-    </footer>
-
-    <script>
-        $(document).ready(function() {
-            $(".show-gif-btn").click(function() {
-                var gifSrc = $(this).data('gif');
-                var $gifContainer = $(this).siblings('.gif-container');
-                
-                // Show the GIF container
-                $gifContainer.show();
-                
-                // Set the GIF src
-                $gifContainer.find('img').attr('src', gifSrc);
-            });
-        });
-    </script>
+<footer class="foot"><p>© MiddleMinds — Learning Hub for Middle Schoolers</p></footer>
+<script src="assets/js/main.js"></script>
+<script>
+  document.querySelectorAll('[data-visual]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const box = btn.nextElementSibling;
+      const open = box.classList.toggle('is-open');
+      btn.textContent = btn.textContent.replace(open ? 'Visualize' : 'Hide', open ? 'Hide' : 'Visualize');
+    });
+  });
+</script>
 </body>
 </html>

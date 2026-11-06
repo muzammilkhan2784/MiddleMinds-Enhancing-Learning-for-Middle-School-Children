@@ -1,58 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MiddleMinds - Learning Hub for Middle Schoolers</title>
-    <link rel="stylesheet" href="assets/CSS/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MiddleMinds — Learning Hub for Middle Schoolers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-    <div id="section1" class="section">
-        <img src="assets/media/MiddleMinds.png">
-    <header>
-        
-        <nav class="top-nav">
-            <ul>
-                <li id="one"><a href="index.html">Home</a></li>
-                <li id="two"><a href="resources.html">Learning Resources</a></li>
-                <li id="three"><a href="insights.html">Insights & Dashboards</a></li>
-                <li id="five"><a href="game/maingame.php">Let's Game</a></li>
-                <li id="six"><a href="survey.html">Survey</a></li>
-            </ul>
-        </nav>
-    </header>
-</div>
+<body data-page="home">
+<div class="grid-bg" aria-hidden="true"></div>
 
+<header class="nav">
+  <a class="nav__brand" href="index.html"><span>~/</span>middleminds</a>
+  <nav class="nav__links" aria-label="Main">
+    <a href="index.html" data-page="home">Home</a>
+    <a href="resources.html" data-page="resources">Learning Resources</a>
+    <a href="insights.html" data-page="insights">Insights</a>
+    <a href="survey.html" data-page="survey">Parent Survey</a>
+    <a class="nav__cta" href="game/index.php">Let's Play</a>
+  </nav>
+  <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
 
-<div class="section-container">
-    <div id="section2" class="sectioner">
-        <section>
-            <h2>Discover Learning That Excites!</h2>
-            <p>MiddleMinds is the ultimate learning hub crafted specifically for middle schoolers like you! Here in grades 6 to 8, you're on a journey of discovery, and MiddleMinds is here to light the way. Explore subjects, tackle challenges, and see your knowledge grow!</p>
-        </section>
+<main>
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div>
+        <p class="kicker">$ grades 6 – 8</p>
+        <h1>Discover the<br>genius within.</h1>
+        <p class="lede">MiddleMinds is a learning hub built for middle schoolers. Work through <strong>math lessons with visual examples</strong>,
+          play a <strong>Jeopardy-style quiz</strong> across Science, Math and General Knowledge, and climb the leaderboard.</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="game/index.php">Play Learning Jeopardy</a>
+          <a class="btn" href="resources.html">Browse lessons →</a>
+        </div>
+      </div>
+      <div class="terminal">
+        <div class="terminal__bar"><span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span><span class="terminal__title">round_01.php</span></div>
+        <pre class="terminal__body"><span class="c-dim">// pick a category and a level</span>
+<span class="c-key">category</span> = <span class="c-str">"Science"</span>
+<span class="c-key">level</span>    = <span class="c-str">2</span>
+
+<span class="c-dim">Q:</span> The process by which plants lose
+   water vapor through their stomata
+   is called _______.
+
+<span class="c-key">&gt;</span> transpiration
+<span class="c-str">✓ Correct! +100</span></pre>
+      </div>
     </div>
-
-    <div id="section3" class="sectioner">
-        <section>
-            <h2>Why MiddleMinds?</h2>
-            <ul>
-                <li><strong>Explore Your Potential:</strong> Dive deep into subjects that fascinate you, from Science to History and Mathematics.</li>
-                <li><strong>Interactive Challenges:</strong> Engage with our dynamic quizzes and games that make learning fun and effective.</li>
-                <li><strong>Stay Ahead:</strong> Regular updates keep you on top of your studies and ready for whatever comes next in school.</li>
-            </ul>
-        </section>
+    <div class="wrap">
+      <ul class="stats">
+        <li><b>3</b><span>quiz categories</span></li>
+        <li><b>9</b><span>levels on the board</span></li>
+        <li><b>100+</b><span>science &amp; general knowledge questions</span></li>
+      </ul>
     </div>
+  </section>
 
-    <div id="section4" class="sectioner">
-        <section>
-            <h2>Join Our Community!</h2>
-            <p>Be part of a community that's all about growth and support. Share your achievements, get help from peers, and participate in community challenges. MiddleMinds isn’t just a platform; it's a movement towards smarter, more engaged learning.</p>
-        </section>
+  <section class="section">
+    <div class="wrap">
+      <h2 class="h-sec reveal"><span class="h-sec__num">01.</span> Why MiddleMinds?</h2>
+      <p class="sec-lede reveal">Learning that feels like exploring, not homework.</p>
+      <div class="cards">
+        <article class="card reveal">
+          <p class="card__tag">Explore</p>
+          <h3>Find your potential</h3>
+          <p>Dive into subjects that fascinate you, from Science and History to Mathematics, with lessons written for grades 6 to 8.</p>
+          <a class="btn" href="resources.html">See lessons</a>
+        </article>
+        <article class="card reveal">
+          <p class="card__tag">Play</p>
+          <h3>Interactive challenges</h3>
+          <p>A quiz board with three categories and three difficulty levels. Math questions are generated fresh every time.</p>
+          <a class="btn" href="game/index.php">Start a game</a>
+        </article>
+        <article class="card reveal">
+          <p class="card__tag">Grow</p>
+          <h3>Parents in the loop</h3>
+          <p>A short survey helps parents share their child's biggest challenges and how involved they are, so the content can improve.</p>
+          <a class="btn" href="survey.html">Take the survey</a>
+        </article>
+      </div>
     </div>
-</div>
+  </section>
 
-    <footer>
-        <p>© 2024 MiddleMinds - All Rights Reserved | Terms & Conditions | Privacy Policy</p>
-    </footer>
+  <section class="section">
+    <div class="wrap">
+      <h2 class="h-sec reveal"><span class="h-sec__num">02.</span> Join our community</h2>
+      <div class="card card--wide reveal">
+        <ul class="ticks">
+          <li><b>Share your achievements:</b> every game you finish lands on the leaderboard.</li>
+          <li><b>Learn at your own pace:</b> start at Level 1 and work up to Level 3 when you're ready.</li>
+          <li><b>Stay curious:</b> the Insights page collects tips from parents and teachers.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot"><p>© MiddleMinds — Learning Hub for Middle Schoolers</p></footer>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
